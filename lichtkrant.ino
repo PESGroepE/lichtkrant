@@ -22,7 +22,7 @@ void setup() {
 
 void loop() {
   lichtkrant.setTextAlignment(PA_LEFT); //display alignment aan de linkerkant
-  char message[] = "User";
+  char message[] = "User2";
   lichtkrant.print(message); //print "Username"
   delay(2000);
   lichtkrant.displayClear();
