@@ -18,6 +18,13 @@ MD_Parola lichtkrant = MD_Parola(HARDWARE_TYPE, DATA_PIN, CLK_PIN, CS_PIN, MAX_D
 
 const String host = "10.0.10.2:8080"; //pi adres
 
+/**
+ * @brief Setup.
+ * 
+ * Initialisatie van seriële communicatie, lichtkrant display, intensiteit van display.
+ * Verbinding maken met WiFi-netwerk.
+ */
+
 void setup() {
   Serial.begin(9600);
   lichtkrant.begin(); //
@@ -36,6 +43,14 @@ void setup() {
   Serial.print("Connected, IP address: ");
   Serial.println(WiFi.localIP());
 }
+
+/**
+ * @brief Loop.
+ * 
+ * Alignment van de display wordt naar links gezet.
+ *Er wordt verbinding gemaakt met HTTP Server (Raspberry Pi), Wemos is de Client.
+ *Een string wordt opgevraagd van de Server; de payload dat verkregen wordt, wordt geprint op lichtkrant.
+ */
 
 void loop() {
   lichtkrant.setTextAlignment(PA_LEFT); //display alignment aan de linkerkant
