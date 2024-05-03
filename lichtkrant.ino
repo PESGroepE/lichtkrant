@@ -18,7 +18,7 @@ MD_Parola lichtkrant = MD_Parola(HARDWARE_TYPE, DATA_PIN, CLK_PIN, CS_PIN, MAX_D
 
 const String host = "10.0.10.2:8080"; //pi adres
 
-/**
+/*!
  * @brief Setup.
  * 
  * Initialisatie van seriële communicatie, lichtkrant display, intensiteit van display.
@@ -44,7 +44,7 @@ void setup() {
   Serial.println(WiFi.localIP());
 }
 
-/**
+/*!
  * @brief Loop.
  * 
  * Alignment van de display wordt naar links gezet.
